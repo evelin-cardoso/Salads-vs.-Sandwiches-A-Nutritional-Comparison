@@ -1,0 +1,23 @@
+Salads vs. Sandwiches: A Nutritional Comparison
+This project explores the nutritional debate between salads and sandwiches based on insights from Fox News. It utilizes Python with Matplotlib and Plotly libraries to create informative 2D, 3D, and interactive plots. Sky blue and sage green colors are chosen for clarity and aesthetics.
+
+Table of Contents
+Introduction
+Data Sources
+Installation
+Usage
+Visualizations
+Caloric Content Comparison
+Macronutrient Distribution
+3D Nutritional Comparison
+Interactive Nutritional Comparison
+Contributing
+License
+Introduction
+The nutritional value of salads versus sandwiches has been a topic of debate for many years. This project aims to provide a comprehensive comparison between the two by analyzing various nutritional metrics. By leveraging Python's Matplotlib and Plotly libraries, we create clear and engaging visualizations to present our findings.
+
+Data Sources
+The data used in this project is sourced from:
+
+Fox News
+Nutritional databases and other relevant sources
