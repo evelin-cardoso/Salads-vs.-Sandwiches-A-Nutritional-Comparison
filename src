@@ -1,0 +1,53 @@
+import matplotlib.pyplot as plt
+import numpy as np
+import plotly.graph_objects as go
+
+# Data for the plots (dummy data for demonstration)
+categories = ['Carbs', 'Proteins', 'Fats', 'Fiber', 'Calories']
+salad_values = [20, 15, 10, 5, 300]
+sandwich_values = [25, 20, 15, 3, 400]
+
+# 2D Plots with Matplotlib
+plt.figure(figsize=(10, 6))
+
+plt.subplot(221)
+plt.bar(categories, salad_values, color='skyblue')
+plt.title('Nutritional Content of a Salad')
+plt.ylabel('Amount')
+plt.ylim(0, 30)
+
+plt.subplot(222)
+plt.bar(categories, sandwich_values, color='mediumseagreen')  # Using 'mediumseagreen' as an alternative
+plt.title('Nutritional Content of a Sandwich')
+plt.ylabel('Amount')
+
+plt.tight_layout()
+plt.show()
+
+# 3D Plot with Plotly
+fig = go.Figure(data=[
+    go.Scatter3d(x=categories, y=salad_values, z=sandwich_values, mode='markers',
+                 marker=dict(size=10, color='skyblue', opacity=0.8),
+                 text=categories,
+                 hoverinfo='text')
+])
+
+fig.update_layout(title='3D Plot: Nutritional Comparison of Salads vs. Sandwiches',
+                  scene=dict(
+                      xaxis_title='Nutritional Categories',
+                      yaxis_title='Salad Values',
+                      zaxis_title='Sandwich Values'
+                  ))
+fig.show()
+
+# Interactive Plot with Plotly
+fig = go.Figure()
+
+fig.add_trace(go.Bar(x=categories, y=salad_values, name='Salad', marker_color='skyblue'))
+fig.add_trace(go.Bar(x=categories, y=sandwich_values, name='Sandwich', marker_color='mediumseagreen'))
+
+fig.update_layout(title='Interactive Plot: Nutritional Comparison of Salads vs. Sandwiches',
+                  xaxis_title='Nutritional Categories',
+                  yaxis_title='Amount',
+                  barmode='group')
+fig.show()
